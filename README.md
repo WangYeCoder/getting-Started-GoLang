@@ -31,5 +31,9 @@ firstslice:=[]byte{1,2,3}
 
 ##流程控制
 
+##defer
+
+
+
 
 
