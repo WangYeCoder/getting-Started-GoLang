@@ -21,7 +21,7 @@ func main() {
 	root.left = &treeNode{}
 	root.right = &treeNode{5, nil, nil}
 	root.right.left = new(treeNode)
-	root.left.right=createNode(2)
+	root.left.right = createNode(2)
 
 	nodes := []treeNode{
 		{value: 3},

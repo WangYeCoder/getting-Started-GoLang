@@ -1,25 +1,40 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	m := map[string]string{
-		"name": "wangye",
-		"sex":  "boy",
-		"high": "188",
-		"love": "yeah",
+	m := map[int]string{
+		1: "wangye",
+		2: "boy",
+		3: "188",
+		4: "yeah",
 	}
 
-	//m2 := make(map[string]int)
+	i := 0
+	s := make([]int, len(m))
 
-	//for _, v := range m {
-	//	fmt.Println(v)
-	//
+	for k, _ := range m {
+		s[i] = k
+		i++
+	}
+
+	sort.Ints(s)
+	fmt.Println(s)
+
+	//for k, v := range m {
+	//	fmt.Println(k, v)
 	//}
+	//
+	//slciemap := make([]map[int]string, 5)
+	//
+	//for k,_ := range slciemap {
+	//	slciemap[k] = make(map[int]string, 1)
+	//	slciemap[k][1] = "ok"
+	//	fmt.Println(slciemap[k])
+	//}
+	//fmt.Println(slciemap)
 
-	//wangyename ,ok:= m["neme"]
-
-	//delete(m,"name")
-
-	fmt.Println(m)
 }
