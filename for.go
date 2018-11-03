@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+import f "fmt"
 
 func main() {
 	sum := 0
@@ -10,6 +10,6 @@ func main() {
 		if sum > 100000000000 {
 			break
 		}
-		fmt.Print(sum, "\n")
+		f.Println()
 	}
 }
