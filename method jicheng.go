@@ -48,25 +48,25 @@ func (e *Employee) SpendSalary(amount float32) {
 
 //定义 interface
 type Men interface {
-	Sayhi()
+	SayHi()
 	Sing(changdianshenmeba string)
 	Guzzle(nidaodiheleduoshao string)
 }
 
 type YoungChap interface {
+	SayHi()
 	Sing(changdianshenmeba string)
 	BorrowMoney(nitamazaiwuruxueshengma float32)
 }
 
 type ElderlyGent interface {
-	Sayhi()
+	SayHi()
 	Sing(changdianshenmeba string)
 	SpendSalary(amount float32)
 }
 
 func main() {
-
-	mike := &Student{
+	mark := Student{
 		Human{
 			"Mark", 25, "222-222-YYYY",
 		},
@@ -74,31 +74,13 @@ func main() {
 		111,
 	}
 
-	sam := &Employee{
+	sam := Employee{
 		Human{
 			"Sam", 45, "111-888-XXXX",
 		},
 		"Golang Inc",
 		123,
 	}
-
-	paul := &Student{
-		Human{
-			"Sam", 45, "111-888-XXXX",
-		},
-		"Golang Inc",
-		123,
-	}
-	var i Men
-
-	i = sam
-
-	i.Sayhi()
-
-	x := make([]Men, 3)
-	x[0], x[1], x[2] = paul, sam, mike
-	for _, value := range x {
-		value.Sayhi()
-	}
-
+	mark.Sayhi()
+	sam.Sayhi()
 }
